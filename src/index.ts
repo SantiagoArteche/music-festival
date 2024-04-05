@@ -44,7 +44,7 @@ const createGallery = (): void => {
 
   for (let i = 1; i <= 12; i++) {
     const image: HTMLPictureElement = document.createElement("picture");
-    image.innerHTML = `<img width="200" height="300" src="../img/thumb/${i}.jpg"  alt="gallery image">`;
+    image.innerHTML = `<img width="200" height="300" src="./img/thumb/${i}.jpg"  alt="gallery image">`;
     gallery?.appendChild(image);
     image.onclick = function () {
       showImage(i);
@@ -54,7 +54,7 @@ const createGallery = (): void => {
 
 const showImage = (id: number): void => {
   const image: HTMLPictureElement = document.createElement("picture");
-  image.innerHTML = `<img width="800" height="900" src="../img/grande/${id}.jpg"  alt="gallery image">`;
+  image.innerHTML = `<img width="800" height="900" src="./img/grande/${id}.jpg"  alt="gallery image">`;
 
   const overlay = document.createElement("DIV");
   overlay.appendChild(image);
